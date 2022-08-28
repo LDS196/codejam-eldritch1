@@ -50,9 +50,7 @@ repeat(greenPlayCards, greencardsData, sumGreenCards);
 repeat(brownPlayCards, browncardsData, sumBrownCards);
 repeat(bluePlayCards, bluecardsData, sumBlueCards);
 
-console.log(greenPlayCards)
-console.log(brownPlayCards)
-console.log(bluePlayCards)
+
 //
 const sumFirstStageGreenCards = ancientsData[0].firstStage.greenCards;
 const sumFirstStageBrownCards = ancientsData[0].firstStage.brownCards;
@@ -66,9 +64,7 @@ repeat1(firstStageGreen, greenPlayCards, sumFirstStageGreenCards);
 repeat1(firstStageBrown, brownPlayCards, sumFirstStageBrownCards);
 repeat1(firstStageBlue, bluePlayCards, sumFirstStageBlueCards);
 
-console.log(firstStageGreen)
-console.log(firstStageBrown)
-console.log(firstStageBlue)
+
 
 //
 const sumSecondStageGreenCards = ancientsData[0].secondStage.greenCards;
@@ -83,9 +79,7 @@ repeat1(secondStageGreen, greenPlayCards, sumSecondStageGreenCards);
 repeat1(secondStageBrown, brownPlayCards, sumSecondStageBrownCards);
 repeat1(secondStageBlue, bluePlayCards, sumSecondStageBlueCards);
 
-console.log(secondStageGreen)
-console.log(secondStageBrown)
-console.log(secondStageBlue)
+
 
 
 //
@@ -99,14 +93,12 @@ const thirdStageBlue = []
 repeat1(thirdStageGreen, greenPlayCards, sumThirdStageGreenCards);
 repeat1(thirdStageBrown, brownPlayCards, sumThirdStageBrownCards);
 repeat1(thirdStageBlue, bluePlayCards, sumThirdStageBlueCards);
-console.log(thirdStageGreen)
-console.log(thirdStageBrown)
-console.log(thirdStageBlue)
+
 
 const firstStageCards = firstStageGreen.concat(firstStageBrown, firstStageBlue)
 const secondStageCards = secondStageGreen.concat(secondStageBrown, secondStageBlue)
 const thirdStageCards = thirdStageGreen.concat(thirdStageBrown, thirdStageBlue)
-console.log(thirdStageCards)
+
 //
 
  const firstStageMix = firstStageCards.map(i =>[Math.random(), i]).sort().map(i => i[1]);
@@ -117,8 +109,8 @@ console.log(thirdStageCards)
    playCards.splice(-1, 0, ...playCards.splice(-1, 1, secondStageMix))
    playCards.splice(-1, 0, ...playCards.splice(-1, 1, thirdStageMix))
    playCardsSrc = firstStageMix.concat(secondStageMix, thirdStageMix)
-   console.log(playCards);
-   //console.log(playCardsSrc)
+   
+  
 
 
 currentCardPlay.src = " ";
@@ -132,22 +124,22 @@ const currentCardPlay  = document.querySelector('.current-card');
 function showCard(){
    if ( playCards[0].length != 0){
       currentCardPlay.src = playCards[0][0].cardFace;
-   console.log(playCards[0])
+   //console.log(playCards[0])
    playCards[0].splice(0, 1);
    treker();
-   console.log(playCards[0])
+   //console.log(playCards[0])
    } else if (playCards[1].length != 0){
       currentCardPlay.src = playCards[1][0].cardFace;
-      console.log(playCards[1])
+     // console.log(playCards[1])
       playCards[1].splice(0, 1);
       treker();
-      console.log(playCards[1])
+     // console.log(playCards[1])
    } else if (playCards[2].length != 0){
       currentCardPlay.src = playCards[2][0].cardFace;
-      console.log(playCards[2])
+      //console.log(playCards[2])
       playCards[2].splice(0, 1);
       treker();
-      console.log(playCards[2])
+      //console.log(playCards[2])
    } else deck.classList.remove('deck-active');
      
    
