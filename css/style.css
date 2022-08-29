@@ -28,6 +28,7 @@ padding: 0 15px;
    padding: 50px 15px ;
  }
  .ancients {
+   color: white;
    display: flex;
    flex-direction: column;
 }
@@ -137,4 +138,7 @@ visibility: visible;
    background-color: blue;
 }
 
-
+.github{
+   color: white;
+   margin-top: 100px;
+}
